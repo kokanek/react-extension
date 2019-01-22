@@ -8,7 +8,7 @@ export default class Home extends Component {
       return (
         <div className="App">
           <div className="row-format">
-            <Button variant="contained" color="primary">Page group One</Button>
+            <h3>Page group One</h3>
             <Link to='/settings/1'><Button variant="contained" color="primary"><SettingsIcon /></Button></Link>
           </div>
         </div>

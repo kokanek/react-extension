@@ -29,6 +29,11 @@
   padding-top: 5px;
 }
 
+h3 {
+  color: #888888;
+  margin-right: 10px;
+}
+
 .main-content {
   background-color: #ffffff;
   display: flex;
