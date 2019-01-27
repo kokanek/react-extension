@@ -9,6 +9,39 @@
     "default_popup": "index.html",
     "default_title": "Open the popup"
   },
+  "background":{
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "open-set-pages-1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Open a set of pages"
+    },
+    "open-set-pages-2": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Open a set of pages"
+    },
+    "open-set-pages-3": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3",
+        "mac": "Command+Shift+3"
+      },
+      "description": "Open a set of pages"
+    },
+    "open-set-pages-4": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3",
+        "mac": "Command+Shift+3"
+      },
+      "description": "Open a set of pages"
+    }
+  },
   "icons": {
     "16": "tab-icon.png",
     "48": "tab-icon.png",
@@ -16,6 +49,8 @@
   },
   "content_security_policy": "script-src 'self' 'sha256-GgRxrVOKNdB4LrRsVPDSbzvfdV4UqglmviH9GoBJ5jk='; object-src 'self'", 
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab", 
+    "tabs"
   ]
 }

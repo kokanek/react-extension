@@ -75,6 +75,7 @@ export default class Settings extends Component {
                     label="Website"
                     name="website"
                     margin="normal"
+                    value={this.state.currentSite}
                     variant="outlined"
                     className="inp"
                     onChange={this.handleOnChange}
