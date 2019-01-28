@@ -49,7 +49,7 @@ export default class Settings extends Component {
         var removeByAttr = function(arr, attr, value){
             var i = arr.length - 1;
             while(i >= 0){
-                if( arr[i] && arr[i][attr] == value ){ 
+                if( arr[i] && arr[i][attr] === value ){ 
                     arr.splice(i,1);
                 }
 
@@ -66,9 +66,9 @@ export default class Settings extends Component {
     }
 
     render() {
-        let sites = this.state.sites.map((site) => <h3>{site && site.siteName}<Button onClick={this.handleOnDelete} id={site.id || null}><DeleteIcon/></Button></h3>);
+        let sites = this.state.sites.map((site) => <h3 className='row-format apart'>{site && site.siteName}<Button onClick={this.handleOnDelete} id={site.id || null}><DeleteIcon/></Button></h3>);
         return (
-            <div>
+            <div className="App">
                 <div className="row-format">
                     <TextField
                     id="outlined-email-input"
@@ -91,7 +91,7 @@ export default class Settings extends Component {
         let siteArray = [];
         let that = this;
         chrome.storage.sync.get([key], function(result) {
-            siteArray = result[key];
+            siteArray = result[key] || [];
             that.setState({sites: siteArray});
             return;
         });

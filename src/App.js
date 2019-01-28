@@ -26,17 +26,14 @@ class App extends Component {
           <div className="row-format">
             <img src={logo} className="App-logo" alt="logo" />
             <Link to='/'><Button variant="contained" color="primary">Show Configuration</Button></Link>
-            <Button variant="contained" color="secondary" onClick={function() {
-              chrome.storage.sync.get(['siteName'], function(result) {
-                console.log('Value currently is ' + result.siteName);
-                chrome.windows.create({ url: [result.siteName] });
-              });
-            }}>Test</Button>
           </div>
           <div className="main-content">
             <Main/>
           </div>
         </header>
+        <footer>
+          <Button onClick={() => chrome.tabs.create({ url: "chrome://extensions/configureCommands" })}variant="contained" color="secondary">Shortcuts</Button>
+        </footer>
       </div>
     );
   }
